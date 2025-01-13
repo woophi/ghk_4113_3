@@ -22,7 +22,9 @@ const imgHb = style({
   objectFit: 'cover',
 });
 
-const switchItem = style({});
+const switchItem = style({
+  paddingLeft: '8px',
+});
 
 globalStyle(`${switchItem} > span > span:first-child`, {
   fontWeight: 500,

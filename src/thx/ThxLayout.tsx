@@ -13,12 +13,10 @@ export const ThxLayout = ({}: { selectedEns: boolean }) => {
         </div>
 
         <Typography.TitleResponsive font="system" tag="h1" view="large" defaultMargins weight="bold">
-          Не удалось выставить заявку!
+          Не удалось отправить заявку
         </Typography.TitleResponsive>
         <Typography.Text tag="p" view="primary-medium" defaultMargins={false}>
-          Благодарим за ваше время! Это экспериментальная форма заявки.
-          <br />
-          Попробуйте подать заявку снова.
+          Это экспериментальная форма заявки. Попробуйте подать заявку снова.
         </Typography.Text>
       </div>
 
@@ -27,7 +25,7 @@ export const ThxLayout = ({}: { selectedEns: boolean }) => {
           block
           view="primary"
           href="a-investments://CA?type=isinFromCurrent&value=RU0009029540"
-          onClick={() => window.gtag('event', 'Buy_no_insurance_3946_click_var3')}
+          onClick={() => window.gtag('event', 'Buy_no_insurance_4113_click_var3')}
         >
           Подать заявку
         </ButtonMobile>
