@@ -27,14 +27,15 @@ const SAFE_OPTIONS = [
   { title: '20%', value: 20 },
   { title: '10%', value: 10 },
   { title: '5%', value: 5 },
-  { title: '2,5%', value: 2.5 },
 ];
+
+const SBER_PRICE = 228.7;
 
 export const App = () => {
   const [loading, setLoading] = useState(false);
   const [thxShow, setThx] = useState(false);
   const [showBs, setShowBs] = useState(false);
-  const [price, setPrice] = useState(272.05);
+  const [price, setPrice] = useState(SBER_PRICE);
   const [count, setCount] = useState(10);
   const [selectedEns, setSelectedEns] = useState(false);
   const [reqType, setReqTpe] = useState(7);
