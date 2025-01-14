@@ -9,10 +9,10 @@ type Payload = {
   quantity: number;
   price: number;
   term: number | 'Nan';
-  percent: number | 'Nan';
   percent_down: number | 'Nan';
   cost: number;
   id: number;
+  komiss: number;
 };
 
 export const sendDataToGA = async (payload: Payload) => {
@@ -23,7 +23,7 @@ export const sendDataToGA = async (payload: Payload) => {
     }-${now.getDate()} ${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`;
 
     await fetch(
-      'https://script.google.com/macros/s/AKfycbzZeW6UUd5eUMMl76vckI36ZME29iUfstRs9mGCJ36jQF0eJYMhCIjDpzw_17zAAt6O/exec',
+      'https://script.google.com/macros/s/AKfycbw0hOxICU9vp8AOkXlsF29r5TW3X3q4owmcAhyj12cbkR2NX35pyBo2pqCDvtQkJ7LC1A/exec',
       {
         redirect: 'follow',
         method: 'POST',

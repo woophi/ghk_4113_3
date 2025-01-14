@@ -24,7 +24,7 @@ export const ThxLayout = ({}: { selectedEns: boolean }) => {
         <ButtonMobile
           block
           view="primary"
-          href="a-investments://CA?type=isinFromCurrent&value=RU0009029540"
+          href="https://alfa.me/37s3BR"
           onClick={() => window.gtag('event', 'Buy_no_insurance_4113_click_var3')}
         >
           Подать заявку
