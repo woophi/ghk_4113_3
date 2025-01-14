@@ -30,8 +30,6 @@ const SAFE_OPTIONS = [
   { title: '2,5%', value: 2.5 },
 ];
 
-const COMMISSION = 7.56;
-
 export const App = () => {
   const [loading, setLoading] = useState(false);
   const [thxShow, setThx] = useState(false);
@@ -55,7 +53,9 @@ export const App = () => {
   const safeSum = Number((percentageLoss * sum * percantageSafe).toFixed(2));
   const safeValue = Number((safeSum / 2).toFixed(2));
 
-  const total = (selectedEns ? safeValue + sum : sum) + COMMISSION;
+  let total = selectedEns ? safeValue + sum : sum;
+  const commission = Number(((total / 100) * 0.03).toFixed(2));
+  total += commission;
 
   const submit = () => {
     window.gtag('event', 'Buy_insurance_4113_click_var3');
@@ -68,7 +68,7 @@ export const App = () => {
       percent_down: selectedEns ? safeOption : 'Nan',
       cost: selectedEns ? safeValue : 0,
       id: LS.getItem(LSKeys.UserId, null) ?? 0,
-      komiss: COMMISSION,
+      komiss: commission,
     }).then(() => {
       setThx(true);
       setLoading(false);
@@ -303,7 +303,7 @@ export const App = () => {
           </div>
 
           <Typography.Text style={{ marginLeft: '8px' }} view="component-secondary" color="secondary">
-            Комиссия ≈ {COMMISSION.toLocaleString('ru')} ₽
+            Комиссия ≈ {commission.toLocaleString('ru')} ₽
           </Typography.Text>
 
           <Switch
