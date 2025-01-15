@@ -312,7 +312,7 @@ export const App = () => {
             reversed
             checked={selectedEns}
             label="Защитить сделку"
-            hint="Если цена актива упадет, вы зафиксируете позицию на срок действия защиты. Мы компенсируем разницу."
+            hint="Если цена актива упадет на выбранный процент в период действия защиты, мы закроем текущую позицию и компенсируем убытки."
             onChange={() => {
               window.gtag('event', 'insurance_4113_click_var3');
               setSelectedEns(!selectedEns);
