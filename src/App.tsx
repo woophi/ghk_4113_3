@@ -29,7 +29,7 @@ const SAFE_OPTIONS = [
   { title: '5%', value: 5 },
 ];
 
-const SBER_PRICE = 228.7;
+const SBER_PRICE = 280.6;
 
 export const App = () => {
   const [loading, setLoading] = useState(false);
@@ -312,7 +312,7 @@ export const App = () => {
             reversed
             checked={selectedEns}
             label="Защитить сделку"
-            hint="Если стоимость актива упадет и вы зафиксируете позицию в период действия защиты, мы компенсируем убытки согласно выбранным настройкам."
+            hint="Если цена актива упадет, вы зафиксируете позицию на срок действия защиты. Мы компенсируем разницу."
             onChange={() => {
               window.gtag('event', 'insurance_4113_click_var3');
               setSelectedEns(!selectedEns);
